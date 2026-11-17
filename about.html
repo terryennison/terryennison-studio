@@ -18,7 +18,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400&family=Inter:wght@400&family=Open+Sans:wght@400&family=Playfair+Display:wght@400&family=Rufina:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
@@ -26,26 +26,24 @@
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
-  <a class="brand" href="index.html">Terry Ennison</a>
-  <nav class="nav" aria-label="Primary">
-    <a href="index.html#work">Work</a>
-    <a href="about.html" aria-current="page">About</a>
-    <a href="about.html#contact">Contact</a>
-  </nav>
+  <div class="header-inner">
+    <a class="brand" href="index.html">Terry Ennison</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html">Work</a>
+      <span class="slash" aria-hidden="true">/</span>
+      <a href="about.html" aria-current="page">About</a>
+    </nav>
+  </div>
 </header>
 <main id="main" class="page">
-  <article class="about">
-    <h1>About</h1>
-    <p>I'm Terry Ennison, a creative director in Rochester, NY, with roots in Accra, Ghana. Since 2021 I've built and directed the visual worlds of three artist personas, SainT, Teezy, and Ennison T, each with its own tone, palette, and storytelling. Every release runs as a campaign: one concept carried from teasers and visuals through launch and paid social.</p>
-    <p>My lane is concept and direction. I write the concept, brief, and shot list, then direct the photographers, designers, and editors who execute it. I've managed up to $5K/month in ad spend during campaigns. I'm also building Long Live Culture, a fashion brand in development.</p>
-    <section class="contact" id="contact" aria-labelledby="contact-heading">
-      <h2 id="contact-heading">Contact</h2>
-      <ul>
-        <li><a href="mailto:ennisonzz@gmail.com">ennisonzz@gmail.com</a></li>
-        <li><a href="https://instagram.com/terryennison">Instagram @terryennison</a></li>
-        <li><a href="https://x.com/TerryEnnison">X @TerryEnnison</a></li>
-      </ul>
-    </section>
+  <article class="about-layout">
+    <div class="about-photo">
+      <img src="images/about-portrait.png" alt="Terry Ennison">
+    </div>
+    <div class="about-copy">
+      <p>I'm Terry Ennison, a creative director in Rochester, NY, with roots in Accra, Ghana. Since 2021 I've built and directed the visual worlds of three artist personas, SainT, Teezy, and Ennison T, each with its own tone, palette, and storytelling. Every release runs as a campaign: one concept carried from teasers and visuals through launch and paid social.</p>
+      <p>My lane is concept and direction. I write the concept, brief, and shot list, then direct the photographers, designers, and editors who execute it. I've managed up to $5K/month in ad spend during campaigns. I'm also building Long Live Culture, a fashion brand in development.</p>
+    </div>
   </article>
 </main>
 <footer class="site-footer">

@@ -18,7 +18,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400&family=Inter:wght@400&family=Open+Sans:wght@400&family=Playfair+Display:wght@400&family=Rufina:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
@@ -27,20 +27,25 @@
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
-  <a class="brand" href="index.html">Terry Ennison</a>
-  <nav class="nav" aria-label="Primary">
-    <a href="index.html#work" aria-current="page">Work</a>
-    <a href="about.html">About</a>
-    <a href="about.html#contact">Contact</a>
-  </nav>
+  <div class="header-inner">
+    <a class="brand" href="index.html">Terry Ennison</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html" aria-current="page">Work</a>
+      <span class="slash" aria-hidden="true">/</span>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
 </header>
 
 <main id="main" class="page">
-<header class="project-head">
-  <h1>SainT</h1>
-  <p class="subtitle">Spiritual, cinematic visual world</p>
-  <p class="role">Creative Director and artist</p>
-</header>
+<div class="saint-head">
+  <div class="saint-block">
+    <h1>SainT</h1>
+    <p>Spiritual, cinematic visual world</p>
+    <p>Creative Director and artist</p>
+    <span class="rule"></span>
+  </div>
+</div>
 <div class="gallery">
 <figure>
   <button class="zoom" type="button" data-full="images/saint/01.jpg" aria-label="View SainT, photo 1 larger">

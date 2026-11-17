@@ -4,21 +4,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Area 51 | Terry Ennison</title>
-  <meta name="description" content="Area 51. Event brand. Creative Director.">
+  <meta name="description" content="Area 51. Nightlife and event brand. Creative Director, brand and event direction.">
   <link rel="canonical" href="https://terryennison.studio/area-51.html">
   <meta property="og:title" content="Area 51 | Terry Ennison">
-  <meta property="og:description" content="Area 51. Event brand. Creative Director.">
+  <meta property="og:description" content="Area 51. Nightlife and event brand. Creative Director, brand and event direction.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://terryennison.studio/area-51.html">
   <meta property="og:image" content="https://terryennison.studio/images/og.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Area 51 | Terry Ennison">
-  <meta name="twitter:description" content="Area 51. Event brand. Creative Director.">
+  <meta name="twitter:description" content="Area 51. Nightlife and event brand. Creative Director, brand and event direction.">
   <meta name="twitter:image" content="https://terryennison.studio/images/og.jpg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400&family=Inter:wght@400&family=Open+Sans:wght@400&family=Playfair+Display:wght@400&family=Rufina:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
@@ -27,24 +27,27 @@
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
-  <a class="brand" href="index.html">Terry Ennison</a>
-  <nav class="nav" aria-label="Primary">
-    <a href="index.html#work" aria-current="page">Work</a>
-    <a href="about.html">About</a>
-    <a href="about.html#contact">Contact</a>
-  </nav>
+  <div class="header-inner">
+    <a class="brand" href="index.html">Terry Ennison</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html" aria-current="page">Work</a>
+      <span class="slash" aria-hidden="true">/</span>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
 </header>
 
-<main id="main" class="page">
-<header class="project-head">
-  <h1>Area 51</h1>
-  <p class="subtitle">Event brand</p>
-  <p class="role">Creative Director</p>
-</header>
-<video class="promo" data-promo controls autoplay muted loop playsinline preload="metadata">
-  <source src="video/area51-promo.mp4" type="video/mp4">
-</video>
-<div class="gallery">
+<main id="main">
+<section class="banner">
+  <img class="banner-bg" src="images/area-51/04.jpg" alt="">
+  <div class="banner-copy">
+    <h1>Area 51</h1>
+    <p>Nightlife and event brand</p>
+    <p>Creative Director, brand and event direction</p>
+    <span class="rule"></span>
+  </div>
+</section>
+<div class="gallery overlap">
 <figure>
   <button class="zoom" type="button" data-full="images/area-51/01.jpg" aria-label="View Area 51, photo 1 larger">
     <img src="images/area-51/01.jpg" alt="Area 51, photo 1" loading="lazy" decoding="async">
@@ -91,6 +94,9 @@
   </button>
 </figure>
 </div>
+<video class="promo" data-promo controls autoplay muted loop playsinline preload="metadata">
+  <source src="video/area51-promo.mp4" type="video/mp4">
+</video>
 </main>
 <footer class="site-footer">
   <p>&copy; 2026 Terry Ennison</p>
