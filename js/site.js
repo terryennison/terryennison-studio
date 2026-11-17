@@ -1,5 +1,6 @@
 (function () {
   document.querySelectorAll("img").forEach(function (img) {
+    if (img.closest("[data-lightbox]")) return;
     function hide() {
       var box = img.closest("figure, a.project");
       if (box) box.classList.add("is-missing");
