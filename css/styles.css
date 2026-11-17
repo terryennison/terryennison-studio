@@ -1,0 +1,385 @@
+:root {
+  --bg: #0b0b0b;
+  --text: #f3efe7;
+  --muted: #a39e94;
+  --line: rgba(243, 239, 231, 0.16);
+  --accent: #7a1f2b;
+  --space: clamp(1.25rem, 3vw, 2.5rem);
+  --max: 1180px;
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.skip {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 10;
+  background: var(--text);
+  color: var(--bg);
+  padding: 0.5rem 0.75rem;
+}
+
+.skip:focus {
+  top: 1rem;
+}
+
+.site-header,
+.site-footer,
+.page {
+  width: min(var(--max), calc(100% - (var(--space) * 2)));
+  margin-inline: auto;
+}
+
+.site-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  flex-wrap: wrap;
+  padding: 1.35rem 0 0.5rem;
+}
+
+.brand {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-size: 1.15rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+}
+
+.brand:hover {
+  color: var(--accent);
+}
+
+.nav {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.nav a {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.nav a[aria-current="page"] {
+  text-decoration: underline;
+  text-decoration-color: var(--line);
+}
+
+.hero {
+  padding: clamp(2.5rem, 8vw, 6.5rem) 0 1rem;
+}
+
+.hero h1 {
+  margin: 0;
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  font-size: clamp(2.8rem, 8.6vw, 7.4rem);
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.lede {
+  margin: 1.15rem 0 0;
+  max-width: 36rem;
+  color: var(--muted);
+  font-size: 1.02rem;
+  line-height: 1.55;
+}
+
+.hero-figure {
+  margin: clamp(1.75rem, 4vw, 3rem) 0 0;
+}
+
+.hero-figure img {
+  width: 100%;
+  height: auto;
+}
+
+.is-missing img,
+.hero-figure.is-missing,
+.gallery figure.is-missing {
+  display: none;
+}
+
+.work {
+  padding: clamp(2.5rem, 6vw, 4.5rem) 0 1rem;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.75rem 1.35rem;
+  align-items: start;
+}
+
+.project {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+  background: #141414;
+}
+
+.project-title {
+  display: block;
+  margin-top: 0.85rem;
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-size: clamp(1.55rem, 2.4vw, 2.05rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.project:hover .project-title {
+  color: var(--accent);
+}
+
+.project-head {
+  padding: clamp(2rem, 6vw, 4.25rem) 0 1.5rem;
+}
+
+.project-head h1 {
+  margin: 0;
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  font-size: clamp(3rem, 7vw, 5.6rem);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+}
+
+.subtitle,
+.role {
+  margin: 0.45rem 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.4;
+}
+
+.role {
+  font-size: 0.82rem;
+}
+
+.promo {
+  width: 100%;
+  margin: 0 0 0.7rem;
+  background: #000;
+}
+
+.gallery {
+  column-count: 2;
+  column-gap: 0.7rem;
+}
+
+.gallery figure {
+  margin: 0 0 0.7rem;
+  break-inside: avoid;
+}
+
+.zoom {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: zoom-in;
+}
+
+.zoom img {
+  width: 100%;
+  height: auto;
+}
+
+.writeup {
+  max-width: 38rem;
+  margin: 2.25rem 0 0;
+}
+
+.writeup p {
+  margin: 0 0 1rem;
+  color: #d9d4cb;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.credit {
+  margin: 1.25rem 0 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+}
+
+.about {
+  padding: clamp(2.5rem, 7vw, 5rem) 0 2rem;
+  max-width: 40rem;
+}
+
+.about h1 {
+  margin: 0 0 1.25rem;
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  font-size: clamp(2.6rem, 6vw, 4.2rem);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.about p {
+  margin: 0 0 1rem;
+  color: #d9d4cb;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.contact {
+  margin-top: 2.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+}
+
+.contact h2 {
+  margin: 0 0 0.85rem;
+  font-family: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.contact ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contact li {
+  margin: 0.35rem 0;
+  font-size: 0.95rem;
+}
+
+.contact a {
+  color: var(--text);
+}
+
+.contact a:hover {
+  color: var(--accent);
+}
+
+.site-footer {
+  padding: 2.5rem 0 2rem;
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+dialog.lightbox {
+  width: auto;
+  max-width: min(96vw, 1400px);
+  max-height: 94vh;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  overflow: visible;
+}
+
+dialog.lightbox[open] {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.6rem;
+}
+
+dialog.lightbox::backdrop {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.lightbox img {
+  max-width: min(96vw, 1400px);
+  max-height: 86vh;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+}
+
+.lightbox-close {
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.lightbox-close:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 720px) {
+  .work-grid,
+  .gallery {
+    grid-template-columns: 1fr;
+    column-count: 1;
+  }
+
+  .nav {
+    gap: 0.9rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
