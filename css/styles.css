@@ -124,28 +124,13 @@ a {
   inset: 0;
 }
 
-.hero { background: #000; }
-
 .hero-media img {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 58%;
+  width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 60% 22%;
-  filter: grayscale(1) contrast(1.18) brightness(0.95);
-}
-
-.hero-media::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background:
-    linear-gradient(to right, #000 0%, #000 40%, rgba(0,0,0,0.75) 50%, rgba(0,0,0,0.15) 72%, rgba(0,0,0,0) 100%),
-    linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 35%),
-    linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 18%);
+  object-position: 64% 6%;
+  transform: scale(1.7);
+  transform-origin: 62% 10%;
 }
 
 .banner-bg {
@@ -155,6 +140,7 @@ a {
   object-position: center 18%;
 }
 
+.hero-media::after,
 .banner::after {
   content: "";
   position: absolute;
@@ -547,11 +533,3 @@ dialog.lightbox::backdrop {
 }
 .clips .clip { width: 100%; background: #000; display: block; }
 @media (max-width: 700px) { .clips { grid-template-columns: 1fr; } }
-
-@media (max-width: 700px) {
-  .hero-media img { width: 100%; object-position: 60% 20%; }
-  .hero-media::before {
-    background: linear-gradient(to top, #000 0%, rgba(0,0,0,0.85) 35%, rgba(0,0,0,0.2) 70%, rgba(0,0,0,0.1) 100%);
-  }
-  .hero-copy { top: auto; bottom: 12%; }
-}
