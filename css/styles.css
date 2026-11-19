@@ -522,3 +522,14 @@ dialog.lightbox::backdrop {
     scroll-behavior: auto;
   }
 }
+
+.clips {
+  width: min(var(--max), calc(100% - 40px));
+  margin: 8px auto 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: start;
+}
+.clips .clip { width: 100%; background: #000; display: block; }
+@media (max-width: 700px) { .clips { grid-template-columns: 1fr; } }
